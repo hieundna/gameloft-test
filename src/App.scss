@@ -1,0 +1,74 @@
+$secondary-color: #A8D6FD;
+$primary-color: #2699FB;
+$light-blue: #68B8FC;
+$light: #D8EDFF;
+
+.header{
+    width: 100%;
+    height: 76px;
+    background-color: $secondary-color;
+    display: flex;
+    justify-content: space-between;
+    .logo, .hamberger{
+        margin: auto 80px;
+    }
+    .hamberger .berger{
+        position: relative;
+        display: block;
+        width: 26px;
+        height: 4px;
+        background-color: #141414;
+        border-radius: 2px;
+    }
+    .berger::before{
+        position: absolute;
+        content: '';
+        display: block;
+        bottom: 8px;
+        width: 32px;
+        height: 4px;
+        background-color: #141414;
+        border-radius: 2px;
+    }
+    .berger::after{
+        position: absolute;
+        content: '';
+        display: block;
+        top: 8px;
+        width: 32px;
+        height: 4px;
+        background-color: #141414;
+        border-radius: 2px;
+    }
+}
+.hotspot-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary-color;
+    min-height: 500px;
+    height: calc(100vh - 155px);
+    .triangle-left {
+        width: 0;
+        height: 0;
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+        border-bottom: 100px solid red;
+    }
+    
+    .triangle-left .inner-triangle {
+        position: relative;
+        top: 2px;
+        left: -96px;
+        width: 0;
+        height: 0;
+        border-left: 96px solid transparent;
+        border-right: 96px solid transparent;
+        border-bottom: 96px solid blue;
+    }
+}
+.store-buttons {
+    height: 79px;
+    background-color: $light;
+}
+
