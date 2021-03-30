@@ -3,6 +3,8 @@ $primary-color: #2699FB;
 $light-blue: #68B8FC;
 $light: #D8EDFF;
 
+$color-text: #2699FB;
+
 *, body{
     font-family: 'Montserrat', sans-serif;
 }
@@ -55,11 +57,10 @@ $light: #D8EDFF;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80%;
+    height: 70%;
 }
 .hotspot-banner {
     background-color: $primary-color;
-    min-height: 500px;
     width: 100%;
     height: calc(100vh - 155px);
     .border-triangle {
@@ -112,10 +113,33 @@ $light: #D8EDFF;
             color: white;
         }
     }
-    .checked {
+    .rating p{
+        display: inline-block;
+        padding-right: 20px;
+        font-size: 11px;
+    }
+    .rating-stars {
+        padding-left: 20px;
+        display: inline-block;
+    }
+    .rating i{
+        margin: 0 3px;
+        color: white
+    }
+    .fas.fa-star {
         color: orange;
     }
+    .game-detail {
+        color: white;
+        font-size: 20px;
+    }
 }
+
+.h2-text {
+    margin-top: 0px;
+    color: $color-text;
+}
+
 .store-buttons {
     height: 79px;
     background-color: $light;
