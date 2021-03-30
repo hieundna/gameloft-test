@@ -3,6 +3,9 @@ $primary-color: #2699FB;
 $light-blue: #68B8FC;
 $light: #D8EDFF;
 
+*, body{
+    font-family: 'Montserrat', sans-serif;
+}
 .header{
     width: 100%;
     height: 76px;
@@ -41,30 +44,76 @@ $light: #D8EDFF;
         border-radius: 2px;
     }
 }
-.hotspot-banner {
+.container{
+    max-width: 1140px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.banner{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 80%;
+}
+.hotspot-banner {
     background-color: $primary-color;
     min-height: 500px;
+    width: 100%;
     height: calc(100vh - 155px);
-    .triangle-left {
+    .border-triangle {
+        position: relative;
         width: 0;
         height: 0;
-        border-left: 100px solid transparent;
-        border-right: 100px solid transparent;
-        border-bottom: 100px solid red;
+        border-radius: 5px;
+        border-left: 143.5px solid transparent;
+        border-right: 143.5px solid transparent;
+        border-bottom: 176px solid #53AEFC;
     }
     
-    .triangle-left .inner-triangle {
-        position: relative;
-        top: 2px;
-        left: -96px;
+    .border-triangle .inner-triangle {
+        position: absolute;
+        top: 9px;
+        left: -130.5px;
         width: 0;
         height: 0;
-        border-left: 96px solid transparent;
-        border-right: 96px solid transparent;
-        border-bottom: 96px solid blue;
+        border-radius: 2px;
+        border-left: 130.5px solid transparent;
+        border-right: 130.5px solid transparent;
+        border-bottom: 162px solid #68B8FC;
+    }
+
+    .border-triangle.inner{
+        top: 80px;
+        left: 30px;
+        border-left: 77.5px solid transparent;
+        border-right: 77.5px solid transparent;
+        border-bottom: 96px solid #53AEFC;
+    }
+
+    .border-triangle.inner .inner-triangle {
+        top: 8px;
+        left: -66.5px;
+        border-left: 66.5px solid transparent;
+        border-right: 66.5px solid transparent;
+        border-bottom: 83px solid #68B8FC;
+
+    }
+    .game-container {
+        display: block;
+        width: 100%;
+        text-align: left;
+        .game-title{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 45px;
+            text-align: left;
+            color: white;
+        }
+    }
+    .checked {
+        color: orange;
     }
 }
 .store-buttons {
