@@ -3,8 +3,6 @@ $primary-color: #2699FB;
 $light-blue: #68B8FC;
 $light: #D8EDFF;
 
-$color-text: #2699FB;
-
 *, body{
     font-family: 'Montserrat', sans-serif;
 }
@@ -53,16 +51,27 @@ $color-text: #2699FB;
     margin-right: auto;
     margin-left: auto;
 }
-.banner{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70%;
+
+.title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+    text-align: left;
 }
+
 .hotspot-banner {
+    position: relative;
     background-color: $primary-color;
     width: 100%;
+    color: white;
     height: calc(100vh - 155px);
+    .banner{
+        position: absolute;
+        top: calc(50% - 180px);
+        left: 50%;
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
     .border-triangle {
         position: relative;
         width: 0;
@@ -102,46 +111,135 @@ $color-text: #2699FB;
 
     }
     .game-container {
-        display: block;
+        position: absolute;
+        bottom: 0;
         width: 100%;
         text-align: left;
-        .game-title{
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 45px;
-            text-align: left;
-            color: white;
+    }
+    .rating {
+        p{
+            display: inline-block;
+            padding-right: 20px;
+            font-size: 11px;
+        }
+        .rating-stars {
+            padding-left: 20px;
+            display: inline-block;
+        }
+        i{
+            margin: 0 3px;
+            color: white
+        }
+        .fas.fa-star {
+            color: orange;
         }
     }
-    .rating p{
-        display: inline-block;
-        padding-right: 20px;
-        font-size: 11px;
-    }
-    .rating-stars {
-        padding-left: 20px;
-        display: inline-block;
-    }
-    .rating i{
-        margin: 0 3px;
-        color: white
-    }
-    .fas.fa-star {
-        color: orange;
-    }
     .game-detail {
-        color: white;
         font-size: 20px;
+        max-width: 581px;
+    }
+    .social-icons {
+        position: absolute;
+        bottom: 33px;
+        right: 84px;
+        font-size: 19px;
+        color: #141414;
+        i{
+            display: block;
+            margin: 7px 0;
+            background-color: white;
+            padding: 7px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
     }
 }
 
-.h2-text {
-    margin-top: 0px;
-    color: $color-text;
+.s1-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.h3-text {
+    color: $primary-color;
 }
 
 .store-buttons {
     height: 79px;
     background-color: $light;
+    position: relative;
+    .container {
+        height: 100%;
+        img{
+            margin-left: 5px;
+        }
+    }
 }
 
+.section2-container {
+    background-color: #EBF6FF;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .form-group {
+        max-width: 247px;
+        color: $primary-color;
+        p {
+            font-size: 12px;
+        }
+        input[type=text],input[type=email], select{
+            margin-bottom: 9px;
+            width: 100%;
+            background-color: transparent;
+            border: 1px solid $primary-color;
+            border-radius: 3px;
+            padding: 4px 10px;
+            line-height: 22px;
+        }
+        input[type=checkbox] {
+            border-color: $primary-color;
+            color: $primary-color;
+            display: inline-block;
+        }
+        .FAQ{
+            display: flex;
+            font-size: 10px;
+            margin: 8px 0;
+            input, label{
+                margin: 6px;
+            }
+        }
+        button {
+            background-color: transparent;
+            padding: 10px 33px;
+            border: 1px solid $primary-color;
+            color: $primary-color;
+        }
+        ::placeholder {
+            color: $primary-color;
+        }
+    }
+}
+.subtitle {
+    font-size: 25px;
+}
+.section4 {
+    color: $primary-color;
+    background-color: $light;
+    .cards{
+        width: 401px;
+        height: 531px;
+        color: white;
+        border-radius: 5px;
+        background-color: $primary-color;
+        padding: 35px 42px 55px 42px;
+    }
+    .card-title {
+        font-size: 35px;
+    }
+}
