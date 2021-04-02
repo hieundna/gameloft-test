@@ -16,9 +16,12 @@ const Fullpage = () => {
 
   const settings = {
     dots: true,
+    centerMode: true,
+    className: "center",
+    centerPadding: '150px',
     infinite: true,
     speed: 500,
-    slidesToShow: 2.5,
+    slidesToShow: 3,
     slidesToScroll: 1
   };
   return (
@@ -84,9 +87,9 @@ const Fullpage = () => {
                   <div className='s1-footer'>
                     <h3 className='h3-text'>Download latest version</h3>
                     <div>
-                      <img src={nintendo} />
-                      <img src={microsoft} />
-                      <img src={steam} />
+                      <img src={nintendo} alt='nintendo' />
+                      <img src={microsoft} alt='microsoft' />
+                      <img src={steam} alt='steam' />
                     </div>
                   </div>
                 </div>
@@ -95,7 +98,7 @@ const Fullpage = () => {
             <div className="section" style={{ backgroundColor: "#68B8FC" }}>
               <div className='section2-container'>
                 <div>
-                  <img src={minion} />
+                  <img src={minion} alt='minion' />
                 </div>
                 <div className='form-group'>
                   <h2 className='subtitle'>Stay in the Know!</h2>
@@ -135,45 +138,90 @@ const Fullpage = () => {
               <div className='container'>
                 <div className='title' style={{ marginBottom: '11px' }}>
                   Special Events & Promotional
-              </div>
-                <div className='subtitle'>
+                </div>
+                <div className='subtitle' style={{ marginBottom: '76px' }}>
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                   sed diam nonumy eirmod tempor
                   invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos.
+                </div>
               </div>
-                <Slider {...settings}>
+              <Slider {...settings}>
                   <div className='cards'>
                     <div className='card-title'>short title here</div>
                     <hr />
                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                      sed diam nonumy eirmod tempor invidunt ut labore et dolore ... </p>
-                    <div>
+                    <div className='bg-img'>
                       <img src={triangle} />
                     </div>
-                    <div className='social-icons'>
+                    <div className='share-icon'>
                       <i class="fas fa-share-alt"></i>
                     </div>
                     <div>
-                      <button type='button' value='readmore'>read more</button>
+                      <button className='readmore' type='button' value='readmore'>read more</button>
                     </div>
                   </div>
-                  <div>
-                    <h3>21AAAAA</h3>
+                  <div className='cards selected'>
+                    <div className='card-title'>short title here</div>
+                    <hr />
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                     sed diam nonumy eirmod tempor invidunt ut labore et dolore ... </p>
+                    <div className='bg-img'>
+                      <img src={triangle} />
+                    </div>
+                    <div className='share-icon'>
+                      <i class="fas fa-share-alt"></i>
+                    </div>
+                    <div>
+                      <button className='readmore' type='button' value='readmore'>read more</button>
+                    </div>
                   </div>
-                  <div>
-                    <h3>321AAAAA</h3>
+                  <div className='cards'>
+                    <div className='card-title'>short title here</div>
+                    <hr />
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                     sed diam nonumy eirmod tempor invidunt ut labore et dolore ... </p>
+                    <div className='bg-img'>
+                      <img src={triangle} />
+                    </div>
+                    <div className='share-icon'>
+                      <i class="fas fa-share-alt"></i>
+                    </div>
+                    <div>
+                      <button className='readmore' type='button' value='readmore'>read more</button>
+                    </div>
                   </div>
-                  <div>
-                    <h3>321AAA</h3>
+                  <div className='cards'>
+                    <div className='card-title'>short title here</div>
+                    <hr />
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                     sed diam nonumy eirmod tempor invidunt ut labore et dolore ... </p>
+                    <div className='bg-img'>
+                      <img src={triangle} />
+                    </div>
+                    <div className='share-icon'>
+                      <i class="fas fa-share-alt"></i>
+                    </div>
+                    <div>
+                      <button className='readmore' type='button' value='readmore'>read more</button>
+                    </div>
                   </div>
-                  <div>
-                    <h3>321AAAAAA</h3>
-                  </div>
-                  <div>
-                    <h3>321AAAA</h3>
+                  <div className='cards'>
+                    <div className='card-title'>short title here</div>
+                    <hr />
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                     sed diam nonumy eirmod tempor invidunt ut labore et dolore ... </p>
+                    <div className='bg-img'>
+                      <img src={triangle} />
+                    </div>
+                    <div className='share-icon'>
+                      <i class="fas fa-share-alt"></i>
+                    </div>
+                    <div>
+                      <button className='readmore' type='button' value='readmore'>read more</button>
+                    </div>
                   </div>
                 </Slider>
-              </div>
             </div>
             <div className="section" style={{ backgroundColor: "#53AEFC" }}>
               <p>Section 4</p>

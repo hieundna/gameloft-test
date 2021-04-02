@@ -232,14 +232,105 @@ $light: #D8EDFF;
     color: $primary-color;
     background-color: $light;
     .cards{
-        width: 401px;
-        height: 531px;
+        position: relative;
+        max-width: 316px;
+        height: 441px;
         color: white;
-        border-radius: 5px;
-        background-color: $primary-color;
+        border-radius: 10px;
+        background-image: linear-gradient($primary-color 50%,#141414); ;
         padding: 35px 42px 55px 42px;
+        hr, p, .readmore, .share-icon{
+            display: none;
+        }
+        hr {
+            width: 90px;
+            height: 2px;
+            border-color: white;
+            background-color: white;
+            margin-left: 0;
+        }
+        .card-title {
+            font-size: 35px;
+            font-weight: 700;
+            max-width: 50%;
+            position: absolute;
+            bottom: 36px;
+            left: 38px
+        }
+        .bg-img {
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        .share-icon {
+            position: absolute;
+            top: 29px;
+            right: 25px;
+            font-size: 20px;
+            color: #141414;
+            i{
+                background-color: white;
+                padding: 8px;
+                width: 21px;
+                height: 21px;
+                border-radius: 50%;
+            }
+        }
+        .readmore {
+            width: 319px;
+            position: absolute;
+            bottom: 55px;
+            align-self: flex-end;
+            color: white;
+            padding: 30px;
+            font-size: 21px;
+            font-weight: 700;
+            background-color: transparent;
+            border: 3px solid white;
+        }
     }
-    .card-title {
-        font-size: 35px;
+    .slick-list {
+        height: auto !important;
+        overflow-y: auto;
+        overflow-x: hidden;
+        overflow: visible;
+    }
+    .center .slick-center .cards {
+        -ms-transform: scale(1.12);
+        transform: scale(1.12);
+    }
+    .slick-current .cards {
+        .bg-img {
+            display: none;
+        }
+        hr, p, .readmore, .share-icon{
+            display: block;
+        }
+        .card-title {
+            position: static;
+        }
+    }
+    .slick-dots {
+        bottom: -70px;
+    }
+    .slick-dots button {
+        font-size: 17px;
+        line-height: 5px;
+        color: $primary-color;
+        padding: 13px;
+        width: auto;
+        height: auto;
+    }
+    .slick-dots button::before {
+        content: '';
+    }
+    .slick-dots li{
+        margin: 0 8px
+    }
+    .slick-dots .slick-active button{
+        border: 2px solid #E6F4FF;
+        border-radius: 50%;
     }
 }
