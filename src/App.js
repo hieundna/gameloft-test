@@ -1,11 +1,14 @@
 import './App.scss';
+import React, { useState } from "react";
 import microsoft from './assets/img/section1/microsoft.png';
 import nintendo from './assets/img/section1/nintendo.png';
 import steam from './assets/img/section1/steam.png';
 import minion from './assets/img/section2/MinionGrey2.png';
 import triangle from './assets/img/section4/double-triangle.png';
 import ReactFullpage from '@fullpage/react-fullpage';
+import Circle from "./components/ProcessRing";
 import Slider from "react-slick";
+import { act } from 'react-dom/test-utils';
 
 function App() {
   return (
@@ -13,13 +16,38 @@ function App() {
   );
 }
 const Fullpage = () => {
+  const [activeSlide, setActiveSlide] = useState(0);
 
   const settings = {
+    customPaging: function (i) {
+      return (
+        <div >
+          <svg
+            height={50}
+            width={50}
+          >
+            <circle
+              stroke-width="4"
+              stroke="white"
+              fill="transparent"
+              r="18"
+              cx="25"
+              cy="25"
+            />
+          </svg>
+          <Circle key={activeSlide}/>0{i + 1}
+        </div>
+      );
+    },
     dots: true,
     centerMode: true,
     className: "center",
     centerPadding: '150px',
     infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3500,
+    variableWidth: true,
+    beforeChange: current => setActiveSlide(current),
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1
@@ -146,6 +174,7 @@ const Fullpage = () => {
                 </div>
               </div>
               <Slider {...settings}>
+                <div style={{ width: "454px" }} >
                   <div className='cards'>
                     <div className='card-title'>short title here</div>
                     <hr />
@@ -161,21 +190,8 @@ const Fullpage = () => {
                       <button className='readmore' type='button' value='readmore'>read more</button>
                     </div>
                   </div>
-                  <div className='cards selected'>
-                    <div className='card-title'>short title here</div>
-                    <hr />
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                     sed diam nonumy eirmod tempor invidunt ut labore et dolore ... </p>
-                    <div className='bg-img'>
-                      <img src={triangle} />
-                    </div>
-                    <div className='share-icon'>
-                      <i class="fas fa-share-alt"></i>
-                    </div>
-                    <div>
-                      <button className='readmore' type='button' value='readmore'>read more</button>
-                    </div>
-                  </div>
+                </div>
+                <div style={{ width: "454px" }} >
                   <div className='cards'>
                     <div className='card-title'>short title here</div>
                     <hr />
@@ -191,6 +207,8 @@ const Fullpage = () => {
                       <button className='readmore' type='button' value='readmore'>read more</button>
                     </div>
                   </div>
+                </div>
+                <div style={{ width: "454px" }} >
                   <div className='cards'>
                     <div className='card-title'>short title here</div>
                     <hr />
@@ -206,6 +224,8 @@ const Fullpage = () => {
                       <button className='readmore' type='button' value='readmore'>read more</button>
                     </div>
                   </div>
+                </div>
+                <div style={{ width: "454px" }} >
                   <div className='cards'>
                     <div className='card-title'>short title here</div>
                     <hr />
@@ -221,10 +241,29 @@ const Fullpage = () => {
                       <button className='readmore' type='button' value='readmore'>read more</button>
                     </div>
                   </div>
-                </Slider>
+                </div>
+                <div style={{ width: "454px" }} >
+                  <div className='cards'>
+                    <div className='card-title'>short title here</div>
+                    <hr />
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                     sed diam nonumy eirmod tempor invidunt ut labore et dolore ... </p>
+                    <div className='bg-img'>
+                      <img src={triangle} />
+                    </div>
+                    <div className='share-icon'>
+                      <i class="fas fa-share-alt"></i>
+                    </div>
+                    <div>
+                      <button className='readmore' type='button' value='readmore'>read more</button>
+                    </div>
+                  </div>
+                </div>
+              </Slider>
             </div>
             <div className="section" style={{ backgroundColor: "#53AEFC" }}>
-              <p>Section 4</p>
+              <div className='example'>
+              </div>
             </div>
           </ReactFullpage.Wrapper>
         );
