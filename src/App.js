@@ -5,10 +5,13 @@ import nintendo from './assets/img/section1/nintendo.png';
 import steam from './assets/img/section1/steam.png';
 import minion from './assets/img/section2/MinionGrey2.png';
 import triangle from './assets/img/section4/double-triangle.png';
+import facebook from './assets/img/section5/facebook.png';
+import linkedin from './assets/img/section5/linkedin.png';
+import twitter from './assets/img/section5/twitter.png';
+import youtube from './assets/img/section5/youtube.png';
 import ReactFullpage from '@fullpage/react-fullpage';
 import Circle from "./components/ProcessRing";
 import Slider from "react-slick";
-import { act } from 'react-dom/test-utils';
 
 function App() {
   return (
@@ -35,7 +38,7 @@ const Fullpage = () => {
               cy="25"
             />
           </svg>
-          <Circle key={activeSlide}/>0{i + 1}
+          <Circle key={activeSlide} />0{i + 1}
         </div>
       );
     },
@@ -43,6 +46,7 @@ const Fullpage = () => {
     centerMode: true,
     className: "center",
     centerPadding: '150px',
+    arrows: false,
     infinite: true,
     autoplay: true,
     autoplaySpeed: 3500,
@@ -262,7 +266,48 @@ const Fullpage = () => {
               </Slider>
             </div>
             <div className="section" style={{ backgroundColor: "#53AEFC" }}>
-              <div className='example'>
+              <div className='container'>
+                <div>
+                  <img src='./gameloft-2.png' />
+                  <div className='subtitle'>Follow Us</div>
+                  <div className='social-logo'>
+                    <img src={facebook} />
+                    <img src={linkedin} />
+                    <img src={twitter} />
+                    <img src={youtube} />
+                  </div>
+                  <div className='dropdown'>
+
+                  </div>
+                </div>
+                <div>
+                  <div className='subtitle'>Visit</div>
+                  <div>
+                    <div>Gameloft Game</div>
+                    <div>Gameloft Careers</div>
+                    <div>Gameloft News</div>
+                    <div>Gameloft Forum</div>
+                    <div>Gameloft Corporate</div>
+                    <div>Gameloft Advertising</div>
+                    <div>Gameloft Support</div>
+                  </div>
+                  <div className='subtitle'>Legal</div>
+                  <div>
+                    <div>Term of User</div>
+                    <div>Privacy Policy</div>
+                    <div>Cookies Policy</div>
+                    <div>EULA</div>
+                    <div>Legal Notices</div>
+                    <div>Event Rules</div>
+                    <div>Bussiness Contacts</div>
+                  </div>
+                </div>
+                <hr />
+                <div className='footer-s5'>
+                  ©2020 Gameloft. All rights reserved. Gameloft and the Gameloft logo
+                   are trademarks of Gameloft in the U.S. and/or other countries.
+                  <br />All other trademarks are the property of their respective owners.
+                </div>
               </div>
             </div>
           </ReactFullpage.Wrapper>
