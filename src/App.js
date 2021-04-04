@@ -40,21 +40,14 @@ function App() {
     dots: true,
     arrows: false,
     infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3500,
     pauseOnHover: false,
     variableWidth: true,
     beforeChange: current => setActiveSlide(current),
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+    slidesToScroll: 1
   };
   return (
     <ReactFullpage

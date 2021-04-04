@@ -543,10 +543,16 @@ body {
             }
         }
     }
+    .slick-list {
+        overflow: initial !important;
+    }
 
     @media screen and(max-width: 900px) {
         .slick-slide {
             width: 335px !important;
+        }
+        .slick-list {
+            overflow: hidden !important;
         }
 
         .slick-active {
