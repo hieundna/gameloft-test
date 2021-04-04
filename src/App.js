@@ -14,11 +14,6 @@ import Circle from "./components/ProcessRing";
 import Slider from "react-slick";
 
 function App() {
-  return (
-    <Fullpage />
-  );
-}
-const Fullpage = () => {
   const [activeSlide, setActiveSlide] = useState(0);
 
   const settings = {
@@ -43,18 +38,23 @@ const Fullpage = () => {
       );
     },
     dots: true,
-    centerMode: true,
-    className: "center",
-    centerPadding: '150px',
     arrows: false,
     infinite: true,
-    autoplay: true,
-    autoplaySpeed: 3500,
+    pauseOnHover: false,
     variableWidth: true,
     beforeChange: current => setActiveSlide(current),
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
   return (
     <ReactFullpage
@@ -76,14 +76,6 @@ const Fullpage = () => {
                 </div>
               </div>
               <div className='hotspot-banner'>
-                <div className='banner'>
-                  <div className='border-triangle'>
-                    <div className="inner-triangle"></div>
-                    <div className='border-triangle inner'>
-                      <div className="inner-triangle"></div>
-                    </div>
-                  </div>
-                </div>
                 <div className='container'>
                   <div className='game-container'>
                     <div className='title game-title'>
@@ -109,9 +101,15 @@ const Fullpage = () => {
                   </div>
                 </div>
                 <div className='social-icons'>
-                  <i class="fas fa-share-alt"></i>
-                  <i class="far fa-envelope"></i>
-                  <i class="fas fa-headphones"></i>
+                  <div>
+                    <i class="fas fa-share-alt"></i>
+                  </div>
+                  <div>
+                    <i class="far fa-envelope"></i>
+                  </div>
+                  <div>
+                    <i class="fas fa-headphones"></i>
+                  </div>
                 </div>
               </div>
               <div className='store-buttons'>
@@ -128,8 +126,8 @@ const Fullpage = () => {
               </div>
             </div>
             <div className="section" style={{ backgroundColor: "#68B8FC" }}>
-              <div className='section2-container'>
-                <div>
+              <div className='section2-container flex space-around'>
+                <div className='minions'>
                   <img src={minion} alt='minion' />
                 </div>
                 <div className='form-group'>
@@ -183,12 +181,71 @@ const Fullpage = () => {
                     <div className='card-title'>short title here</div>
                     <hr />
                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                     sed diam nonumy eirmod tempor invidunt ut labore et dolore ... </p>
+                     sed diam nonumy eirmod tempor invidunt ut labore et dolore </p>
                     <div className='bg-img'>
-                      <img src={triangle} />
+                      <img src={triangle} alt='triangle' />
                     </div>
                     <div className='share-icon'>
-                      <i class="fas fa-share-alt"></i>
+                      <div>
+                        <i class="fas fa-share-alt"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <button className='readmore' type='button' value='readmore'>read more</button>
+                    </div>
+                  </div>
+                </div>
+                <div style={{ width: "454px" }} >
+                  <div className='cards'>
+                    <div className='card-title'>short title here</div>
+                    <hr />
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                     sed diam nonumy eirmod tempor invidunt ut labore et dolore </p>
+                    <div className='bg-img'>
+                      <img src={triangle} alt='triangle' />
+                    </div>
+                    <div className='share-icon'>
+                      <div>
+                        <i class="fas fa-share-alt"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <button className='readmore' type='button' value='readmore'>read more</button>
+                    </div>
+                  </div>
+                </div>
+                <div style={{ width: "454px" }} >
+                  <div className='cards'>
+                    <div className='card-title'>short title here</div>
+                    <hr />
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                     sed diam nonumy eirmod tempor invidunt ut labore et dolore </p>
+                    <div className='bg-img'>
+                      <img src={triangle} alt='triangle' />
+                    </div>
+                    <div className='share-icon'>
+                      <div>
+                        <i class="fas fa-share-alt"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <button className='readmore' type='button' value='readmore'>read more</button>
+                    </div>
+                  </div>
+                </div>
+                <div style={{ width: "454px" }} >
+                  <div className='cards'>
+                    <div className='card-title'>short title here</div>
+                    <hr />
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                     sed diam nonumy eirmod tempor invidunt ut labore et dolore </p>
+                    <div className='bg-img'>
+                      <img src={triangle} alt='triangle' />
+                    </div>
+                    <div className='share-icon'>
+                      <div>
+                        <i class="fas fa-share-alt"></i>
+                      </div>
                     </div>
                     <div>
                       <button className='readmore' type='button' value='readmore'>read more</button>
@@ -202,61 +259,12 @@ const Fullpage = () => {
                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                      sed diam nonumy eirmod tempor invidunt ut labore et dolore ... </p>
                     <div className='bg-img'>
-                      <img src={triangle} />
+                      <img src={triangle} alt='triangle' />
                     </div>
                     <div className='share-icon'>
-                      <i class="fas fa-share-alt"></i>
-                    </div>
-                    <div>
-                      <button className='readmore' type='button' value='readmore'>read more</button>
-                    </div>
-                  </div>
-                </div>
-                <div style={{ width: "454px" }} >
-                  <div className='cards'>
-                    <div className='card-title'>short title here</div>
-                    <hr />
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                     sed diam nonumy eirmod tempor invidunt ut labore et dolore ... </p>
-                    <div className='bg-img'>
-                      <img src={triangle} />
-                    </div>
-                    <div className='share-icon'>
-                      <i class="fas fa-share-alt"></i>
-                    </div>
-                    <div>
-                      <button className='readmore' type='button' value='readmore'>read more</button>
-                    </div>
-                  </div>
-                </div>
-                <div style={{ width: "454px" }} >
-                  <div className='cards'>
-                    <div className='card-title'>short title here</div>
-                    <hr />
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                     sed diam nonumy eirmod tempor invidunt ut labore et dolore ... </p>
-                    <div className='bg-img'>
-                      <img src={triangle} />
-                    </div>
-                    <div className='share-icon'>
-                      <i class="fas fa-share-alt"></i>
-                    </div>
-                    <div>
-                      <button className='readmore' type='button' value='readmore'>read more</button>
-                    </div>
-                  </div>
-                </div>
-                <div style={{ width: "454px" }} >
-                  <div className='cards'>
-                    <div className='card-title'>short title here</div>
-                    <hr />
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                     sed diam nonumy eirmod tempor invidunt ut labore et dolore ... </p>
-                    <div className='bg-img'>
-                      <img src={triangle} />
-                    </div>
-                    <div className='share-icon'>
-                      <i class="fas fa-share-alt"></i>
+                      <div>
+                        <i class="fas fa-share-alt"></i>
+                      </div>
                     </div>
                     <div>
                       <button className='readmore' type='button' value='readmore'>read more</button>
@@ -265,48 +273,62 @@ const Fullpage = () => {
                 </div>
               </Slider>
             </div>
-            <div className="section" style={{ backgroundColor: "#53AEFC" }}>
-              <div className='container'>
-                <div>
-                  <img src='./gameloft-2.png' />
-                  <div className='subtitle'>Follow Us</div>
-                  <div className='social-logo'>
-                    <img src={facebook} />
-                    <img src={linkedin} />
-                    <img src={twitter} />
-                    <img src={youtube} />
-                  </div>
-                  <div className='dropdown'>
+            <div className="section">
+              <div className='section-5 '>
+                <div className='flex'>
+                  <div className='left-widget'>
+                    <div className='gl-logo' >
+                      <img src='./gameloft-2.png' alt='gameloft' />
+                    </div>
+                    <div className='widget'>
+                      <div className='subtitle'>Follow Us</div>
+                      <div className='social-logo'>
+                        <img src={facebook} alt='facebook' />
+                        <img src={linkedin} alt='linkedin' />
+                        <img src={twitter} alt='twitter' />
+                        <img src={youtube} alt='youtube' />
+                      </div>
+                    </div>
+                    <div className='dropdown'>
 
+                    </div>
+                  </div>
+                  <div className='right-widget'>
+                    <div className='right'>
+                      <div className='subtitle'>VISIT</div>
+                      <div className='list-policy'>
+                        <a href='#'>Gameloft Game</a>
+                        <a href='#'>Gameloft Careers</a>
+                        <a href='#'>Gameloft News</a>
+                        <a href='#'>Gameloft Forum</a>
+                        <a href='#'>Gameloft Corporate</a>
+                        <a href='#'>Gameloft Advertising</a>
+                        <a href='#'>Gameloft Support</a>
+                      </div>
+                      <div className='subtitle'>LEGAL</div>
+                      <div className='list-policy'>
+                        <a href='#'>Term of User</a>
+                        <a href='#'>Privacy Policy</a>
+                        <a href='#'>Cookies Policy</a>
+                        <a href='#'>EULA</a>
+                        <a href='#'>Legal Notices</a>
+                        <a href='#'>Event Rules</a>
+                        <a href='#'>Bussiness Contacts</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div>
-                  <div className='subtitle'>Visit</div>
-                  <div>
-                    <div>Gameloft Game</div>
-                    <div>Gameloft Careers</div>
-                    <div>Gameloft News</div>
-                    <div>Gameloft Forum</div>
-                    <div>Gameloft Corporate</div>
-                    <div>Gameloft Advertising</div>
-                    <div>Gameloft Support</div>
+
+                <div className='footer'>
+                  <hr />
+
+                  <div className='container'>
+                    <div className='footer-s5'>
+                      <p>©2020 Gameloft. All rights reserved. Gameloft and the Gameloft logo
+                      are trademarks of Gameloft in the U.S. and/or other countries.</p>
+                      <p>All other trademarks are the property of their respective owners.</p>
+                    </div>
                   </div>
-                  <div className='subtitle'>Legal</div>
-                  <div>
-                    <div>Term of User</div>
-                    <div>Privacy Policy</div>
-                    <div>Cookies Policy</div>
-                    <div>EULA</div>
-                    <div>Legal Notices</div>
-                    <div>Event Rules</div>
-                    <div>Bussiness Contacts</div>
-                  </div>
-                </div>
-                <hr />
-                <div className='footer-s5'>
-                  ©2020 Gameloft. All rights reserved. Gameloft and the Gameloft logo
-                   are trademarks of Gameloft in the U.S. and/or other countries.
-                  <br />All other trademarks are the property of their respective owners.
                 </div>
               </div>
             </div>
@@ -315,6 +337,6 @@ const Fullpage = () => {
       }}
     />
   )
-};
+}
 
 export default App;

@@ -46,7 +46,6 @@ class Circle extends React.Component {
     }
 
     componentDidMount() {
-        // emulating progress
         const interval = setInterval(() => {
             this.setState({ progress: this.state.progress + 1 });
             if (this.state.progress === 100)
